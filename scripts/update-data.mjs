@@ -210,34 +210,51 @@ function normalizeProtest(row, spreadsheetRow) {
     return null;
   }
 
-  const startDate = normalizeIsoDate(row.start_date);
-  const endDate = normalizeIsoDate(
-    row.end_date || row.start_date
+  const startDate = normalizeIsoDate(
+    row.start_date
   );
+
+  const rawEndDate = String(
+    row.end_date || ""
+  ).trim();
 
   if (!startDate) {
     console.warn(
       `Skipping protest row ${spreadsheetRow}: ` +
       `invalid start_date "${row.start_date}".`
     );
+
     return null;
   }
 
-  if (!endDate) {
+  /*
+   * Empty end_date means a single-day protest.
+   */
+  const endDate = rawEndDate
+    ? normalizeIsoDate(rawEndDate)
+    : null;
+
+  if (rawEndDate && !endDate) {
     console.warn(
       `Skipping protest row ${spreadsheetRow}: ` +
       `invalid end_date "${row.end_date}".`
     );
+
     return null;
   }
 
-  const dayCount = countInclusiveDays(startDate, endDate);
+  const dayCount = countProtestDays(
+    startDate,
+    endDate
+  );
 
   if (dayCount === null) {
     console.warn(
       `Skipping protest row ${spreadsheetRow}: ` +
-      `end_date "${endDate}" is before start_date "${startDate}".`
+      `end_date "${endDate}" is before ` +
+      `start_date "${startDate}".`
     );
+
     return null;
   }
 
@@ -248,14 +265,36 @@ function normalizeProtest(row, spreadsheetRow) {
     startDate,
     endDate,
     dayCount,
-    status: normalizeStatus(row.status),
-    importance: normalizeImportance(row.importance),
+
+    status: normalizeStatus(
+      row.status,
+      startDate,
+      endDate
+    ),
+
+    importance: normalizeImportance(
+      row.importance
+    ),
+
     participants:
-      String(row.participants || "").trim() || null,
-    location: String(row.location || "").trim(),
-    description: String(row.description || "").trim(),
-    source: String(row.source || "").trim(),
-    sourceUrl: normalizeUrl(row.source_url),
+      String(row.participants || "").trim() ||
+      null,
+
+    location: String(
+      row.location || ""
+    ).trim(),
+
+    description: String(
+      row.description || ""
+    ).trim(),
+
+    source: String(
+      row.source || ""
+    ).trim(),
+
+    sourceUrl: normalizeUrl(
+      row.source_url
+    ),
   };
 }
 
@@ -267,17 +306,30 @@ function normalizeProtest(row, spreadsheetRow) {
  * 2026-06-01 to 2026-06-02 = 2 days
  * 2026-06-01 to 2026-06-03 = 3 days
  */
-function countInclusiveDays(startDate, endDate) {
+function countProtestDays(startDate, endDate) {
   const start = isoDateToUtcTimestamp(startDate);
-  const end = isoDateToUtcTimestamp(endDate);
 
-  if (start === null || end === null || end < start) {
+  if (start === null) {
     return null;
   }
 
-  const millisecondsPerDay = 24 * 60 * 60 * 1000;
+  // No end date entered: count as one protest day.
+  if (!endDate) {
+    return 1;
+  }
 
-  return Math.floor((end - start) / millisecondsPerDay) + 1;
+  const end = isoDateToUtcTimestamp(endDate);
+
+  if (end === null || end < start) {
+    return null;
+  }
+
+  const millisecondsPerDay =
+    24 * 60 * 60 * 1000;
+
+  return Math.floor(
+    (end - start) / millisecondsPerDay
+  ) + 1;
 }
 
 function normalizeIsoDate(value) {
@@ -348,8 +400,31 @@ function computeMarkerStatus(protests) {
   return "completed";
 }
 
-function normalizeStatus(value) {
-  const status = String(value || "completed")
+function hasDatePassed(dateValue) {
+  const dateTimestamp =
+    isoDateToUtcTimestamp(dateValue);
+
+  if (dateTimestamp === null) {
+    return false;
+  }
+
+  const now = new Date();
+
+  const todayTimestamp = Date.UTC(
+    now.getUTCFullYear(),
+    now.getUTCMonth(),
+    now.getUTCDate()
+  );
+
+  return dateTimestamp < todayTimestamp;
+}
+
+function normalizeStatus(
+  value,
+  startDate,
+  endDate
+) {
+  const status = String(value || "")
     .trim()
     .toLowerCase();
 
@@ -362,9 +437,27 @@ function normalizeStatus(value) {
     "cancelled",
   ]);
 
-  return allowed.has(status)
-    ? status
-    : "completed";
+  // A manually entered valid status takes priority.
+  if (status) {
+    if (allowed.has(status)) {
+      return status;
+    }
+
+    console.warn(
+      `Unknown protest status "${value}". ` +
+      "The status will be inferred from the date."
+    );
+  }
+
+  /*
+   * Use end_date for multi-day protests.
+   * Use start_date when end_date is empty.
+   */
+  const comparisonDate = endDate || startDate;
+
+  return hasDatePassed(comparisonDate)
+    ? "completed"
+    : "planned";
 }
 
 function normalizeImportance(value) {
