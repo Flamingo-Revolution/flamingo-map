@@ -238,16 +238,18 @@ const locationLayer = new ol.layer.Vector({
 });
 
 
+
 const baseMapLayer = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    url: "https://{a-d}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+
     attributions:
-      '&copy; OpenStreetMap contributors &copy; CARTO',
+      '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>',
 
     crossOrigin: "anonymous",
     maxZoom: 19,
-  })
-})
+  }),
+});
 
 const map = new ol.Map({
   target: mapElement,
@@ -567,19 +569,6 @@ function renderProtestItem(protest) {
         ${isMajor ? "protest-item-major" : ""}
       "
     >
-      ${
-        isUpcoming
-          ? `
-            <div class="upcoming-badge">
-              ${
-                status === "active"
-                  ? "Live"
-                  : statusLabel
-              }
-            </div>
-          `
-          : ""
-      }
 
       <h4>${title}</h4>
 
@@ -617,7 +606,7 @@ function renderProtestItem(protest) {
           ? `<p>${description}</p>`
           : ""
       }
-
+      <br>
       ${
         sourceUrl
           ? `
