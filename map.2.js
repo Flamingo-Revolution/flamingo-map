@@ -137,7 +137,8 @@ function getMarkerStatus(feature) {
 }
 
 function getMarkerStyle(feature) {
-  const count = Number(feature.get("protestCount")) || 1;
+  const protests = feature.get("protests") || [];
+  const count = Math.max(1, countProtestDays(protests));
   const markerStatus =
     feature.get("markerStatus") ||
     getMarkerStatus(feature);
@@ -236,17 +237,17 @@ const locationLayer = new ol.layer.Vector({
   style: feature => getMarkerStyle(feature),
 });
 
+
 const baseMapLayer = new ol.layer.Tile({
   source: new ol.source.XYZ({
-    url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-
+    url: "https://{a-d}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
     attributions:
-      '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap contributors</a>',
+      '&copy; OpenStreetMap contributors &copy; CARTO',
 
     crossOrigin: "anonymous",
     maxZoom: 19,
-  }),
-});
+  })
+})
 
 const map = new ol.Map({
   target: mapElement,
@@ -636,42 +637,172 @@ function renderProtestItem(protest) {
   `;
 }
 
+function parseProtestDate(value) {
+  if (!value) return null;
+
+  const text = String(value).trim();
+
+  // YYYY-MM-DD
+  const isoMatch = text.match(
+    /^(\d{4})-(\d{1,2})-(\d{1,2})/
+  );
+
+  if (isoMatch) {
+    return new Date(
+      Date.UTC(
+        Number(isoMatch[1]),
+        Number(isoMatch[2]) - 1,
+        Number(isoMatch[3])
+      )
+    );
+  }
+
+  const parsed = new Date(text);
+
+  return Number.isNaN(parsed.getTime())
+    ? null
+    : parsed;
+}
+
+function getProtestStartDate(protest) {
+  return parseProtestDate(
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
+}
+
+function getProtestEndDate(protest) {
+  return parseProtestDate(
+    protest.endDate ||
+    protest.end_date ||
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
+}
+
 function sortProtests(protests) {
-  const statusOrder = {
-    active: 0,
-    confirmed: 1,
-    planned: 1,
-    tentative: 2,
-    completed: 3,
-    cancelled: 4,
-  };
+  return [...protests].sort(
+    (first, second) => {
+      const firstDate =
+        getProtestStartDate(first)?.getTime() ?? 0;
 
-  return protests
-    .slice()
-    .sort((first, second) => {
-      const firstStatus = normalizeStatus(
-        first.status
+      const secondDate =
+        getProtestStartDate(second)?.getTime() ?? 0;
+
+      // Newest first.
+      return secondDate - firstDate;
+    }
+  );
+}
+
+function countInclusiveDays(startDate, endDate) {
+  if (!startDate) return 1;
+
+  const start = Date.UTC(
+    startDate.getUTCFullYear(),
+    startDate.getUTCMonth(),
+    startDate.getUTCDate()
+  );
+
+  const effectiveEnd = endDate || startDate;
+
+  const end = Date.UTC(
+    effectiveEnd.getUTCFullYear(),
+    effectiveEnd.getUTCMonth(),
+    effectiveEnd.getUTCDate()
+  );
+
+  if (end < start) return 1;
+
+  return (
+    Math.floor(
+      (end - start) / (24 * 60 * 60 * 1000)
+    ) + 1
+  );
+}
+
+function countProtestDays(protests) {
+  return protests.reduce(
+    (total, protest) => {
+      return (
+        total +
+        countInclusiveDays(
+          getProtestStartDate(protest),
+          getProtestEndDate(protest)
+        )
       );
+    },
+    0
+  );
+}
 
-      const secondStatus = normalizeStatus(
-        second.status
-      );
+const CENTRAL_EUROPE_TIMEZONE = "Europe/Berlin";
 
-      const firstOrder =
-        statusOrder[firstStatus] ?? 99;
+function getDateKeyInTimeZone(
+  date,
+  timeZone = CENTRAL_EUROPE_TIMEZONE
+) {
+  const parts = new Intl.DateTimeFormat(
+    "en-CA",
+    {
+      timeZone,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+    }
+  ).formatToParts(date);
 
-      const secondOrder =
-        statusOrder[secondStatus] ?? 99;
+  const values = Object.fromEntries(
+    parts.map(part => [part.type, part.value])
+  );
 
-      if (firstOrder !== secondOrder) {
-        return firstOrder - secondOrder;
-      }
+  return `${values.year}-${values.month}-${values.day}`;
+}
 
-      return String(first.startDate || first.date || "")
-        .localeCompare(
-          String(second.startDate || second.date || "")
-        );
-    });
+function getProtestDateKey(value) {
+  if (!value) return "";
+
+  const text = String(value).trim();
+  const isoMatch = text.match(
+    /^(\d{4})-(\d{1,2})-(\d{1,2})/
+  );
+
+  if (isoMatch) {
+    return [
+      isoMatch[1],
+      isoMatch[2].padStart(2, "0"),
+      isoMatch[3].padStart(2, "0"),
+    ].join("-");
+  }
+
+  const parsed = new Date(text);
+  return Number.isNaN(parsed.getTime())
+    ? ""
+    : getDateKeyInTimeZone(parsed);
+}
+
+function isProtestToday(protest) {
+  const today = getDateKeyInTimeZone(new Date());
+  const start = getProtestDateKey(
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
+  const end = getProtestDateKey(
+    protest.endDate ||
+    protest.end_date ||
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
+
+  return Boolean(
+    start &&
+    today >= start &&
+    today <= (end || start)
+  );
 }
 
 function buildPopupHtml(
@@ -693,6 +824,9 @@ function buildPopupHtml(
 
   const sortedProtests =
     sortProtests(protests);
+
+  const protestDayCount =
+    countProtestDays(protests);
 
   const protestItems =
     sortedProtests
@@ -734,9 +868,9 @@ function buildPopupHtml(
     </div>
 
     <p class="popup-count">
-      ${protests.length}
+      ${protestDayCount}
       ${
-        protests.length === 1
+        protestDayCount === 1
           ? "protestë"
           : "protesta"
       }
@@ -1093,6 +1227,7 @@ function getUpcomingProtests() {
 }
 
 function renderUpcomingProtests() {
+
   if (!upcomingListElement) {
     return;
   }
@@ -1151,6 +1286,9 @@ function renderUpcomingProtests() {
           protest.importance === "major" ||
           protest.major === true;
 
+        const isToday =
+          isProtestToday(protest);
+
         return `
           <button
             class="
@@ -1161,10 +1299,25 @@ function renderUpcomingProtests() {
                   ? "upcoming-card-major"
                   : ""
               }
+              ${
+                isToday
+                  ? "upcoming-card-today"
+                  : ""
+              }
             "
             type="button"
             data-upcoming-index="${index}"
           >
+            ${
+              isToday
+                ? `
+                  <span class="upcoming-card-today-label">
+                    Sot
+                  </span>
+                `
+                : ""
+            }
+
             <p class="upcoming-card-date">
               ${
                 date ||
