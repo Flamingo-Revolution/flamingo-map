@@ -65,7 +65,7 @@ mobilePopupElement.innerHTML = `
     <button
       class="popup-closer mobile-popup-closer"
       type="button"
-      aria-label="Close city details"
+      aria-label="Mbyll detajet e qytetit"
       data-mobile-popup-close
     >
       ×
@@ -102,18 +102,18 @@ function getMarkerStatus(feature) {
 
   const hasActive = protests.some(
     protest =>
-      String(protest.status || "").toLowerCase() === "active"
+      normalizeStatus(protest.status) === "active"
   );
 
   const hasConfirmed = protests.some(protest =>
     ["confirmed", "planned"].includes(
-      String(protest.status || "").toLowerCase()
+      normalizeStatus(protest.status)
     )
   );
 
   const hasTentative = protests.some(
     protest =>
-      String(protest.status || "").toLowerCase() ===
+      normalizeStatus(protest.status) ===
       "tentative"
   );
 
@@ -347,7 +347,7 @@ function formatDate(value) {
   }
 
   return new Intl.DateTimeFormat(
-    undefined,
+    "sq-AL",
     {
       year: "numeric",
       month: "long",
@@ -357,9 +357,12 @@ function formatDate(value) {
 }
 
 function normalizeStatus(value) {
-  return String(value || "completed")
+  const normalized = String(value ?? "")
     .trim()
     .toLowerCase();
+
+  // An empty status means the protest is completed.
+  return normalized || "completed";
 }
 
 function selectedValues(elements) {
@@ -405,11 +408,11 @@ function buildCityLinks(feature, city) {
               href="${cityUrl}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Open ${city} community page"
-              title="Community page"
+              aria-label="Hap faqen e komunitetit ${city}"
+              title="Faqja e komunitetit"
             >
               <span aria-hidden="true">↗</span>
-              <span>Community</span>
+              <span>Komuniteti</span>
             </a>
           `
           : ""
@@ -423,7 +426,7 @@ function buildCityLinks(feature, city) {
               href="${instagramUrl}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="${city} on Instagram"
+              aria-label="${city} në Instagram"
               title="Instagram"
             >
               <svg
@@ -466,7 +469,7 @@ function buildCityLinks(feature, city) {
               href="${facebookUrl}"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="${city} on Facebook"
+              aria-label="${city} në Facebook"
               title="Facebook"
             >
               <svg
@@ -490,12 +493,12 @@ function buildCityLinks(feature, city) {
 
 function getStatusLabel(status) {
   const labels = {
-    confirmed: "Confirmed",
-    planned: "Upcoming",
-    active: "Happening now",
-    tentative: "Not confirmed",
-    completed: "Past protest",
-    cancelled: "Cancelled",
+    confirmed: "E konfirmuar",
+    planned: "E ardhshme",
+    active: "Në zhvillim",
+    tentative: "E pakonfirmuar",
+    completed: "E përfunduar",
+    cancelled: "E anuluar",
   };
 
   return labels[status] || status;
@@ -503,7 +506,7 @@ function getStatusLabel(status) {
 
 function renderProtestItem(protest) {
   const title = escapeHtml(
-    protest.title || "Untitled protest"
+    protest.title || "Protestë pa titull"
   );
 
   const startDate = formatDate(protest.startDate || protest.date);
@@ -622,11 +625,11 @@ function renderProtestItem(protest) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              ${source ? `Source: ${source} →` : "View source →"}
+              ${source ? `Burimi: ${source} →` : "View source →"}
             </a>
           `
           : source
-            ? `<p class="protest-source">Source: ${source}</p>`
+            ? `<p class="protest-source">Burimi: ${source}</p>`
             : ""
       }
     </article>
@@ -678,7 +681,7 @@ function buildPopupHtml(
   const city = escapeHtml(
     feature.get("city") ||
     feature.get("title") ||
-    "Unknown city"
+    "Qytet i panjohur"
   );
 
   const country = escapeHtml(
@@ -701,7 +704,7 @@ function buildPopupHtml(
 
   return `
     <p class="popup-type">
-      Protest city
+      Qytet proteste
     </p>
 
     <div class="popup-city-header">
@@ -734,8 +737,8 @@ function buildPopupHtml(
       ${protests.length}
       ${
         protests.length === 1
-          ? "protest"
-          : "protests"
+          ? "protestë"
+          : "protesta"
       }
     </p>
 
@@ -744,7 +747,7 @@ function buildPopupHtml(
         protestItems ||
         `
           <p class="upcoming-empty">
-            No protests have been added.
+            Nuk janë shtuar protesta.
           </p>
         `
       }
@@ -1100,7 +1103,7 @@ function renderUpcomingProtests() {
   if (upcoming.length === 0) {
     upcomingListElement.innerHTML = `
       <p class="upcoming-empty">
-        No upcoming protests have been added.
+        Nuk janë shtuar protesta të ardhshme.
       </p>
     `;
 
@@ -1165,7 +1168,7 @@ function renderUpcomingProtests() {
             <p class="upcoming-card-date">
               ${
                 date ||
-                "Date to be confirmed"
+                "Data do të konfirmohet"
               }
             </p>
 
@@ -1347,7 +1350,7 @@ function setSidebar(open) {
     "aria-label",
     open
       ? "Close map filters"
-      : "Open map filters"
+      : "Hap filtrat e hartës"
   );
 
   window.setTimeout(
@@ -1442,8 +1445,8 @@ upcomingToggleElement?.addEventListener(
     upcomingToggleElement.setAttribute(
       "aria-label",
       collapsed
-        ? "Show upcoming protests"
-        : "Hide upcoming protests"
+        ? "Shfaq protestat e ardhshme"
+        : "Fshih protestat e ardhshme"
     );
   }
 );

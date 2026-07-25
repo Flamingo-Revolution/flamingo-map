@@ -437,22 +437,12 @@ function normalizeStatus(
     "cancelled",
   ]);
 
-  // A manually entered valid status takes priority.
-  if (status) {
-    if (allowed.has(status)) {
-      return status;
-    }
-
-    console.warn(
-      `Unknown protest status "${value}". ` +
-      "The status will be inferred from the date."
-    );
+  // Manual status takes priority
+  if (allowed.has(status)) {
+    return status;
   }
 
-  /*
-   * Use end_date for multi-day protests.
-   * Use start_date when end_date is empty.
-   */
+  // Otherwise infer from dates...
   const comparisonDate = endDate || startDate;
 
   return hasDatePassed(comparisonDate)
