@@ -190,7 +190,7 @@ function normalizeCity(row, spreadsheetRow) {
     cityUrl: normalizeUrl(row.city_url),
     instagramUrl: normalizeUrl(row.instagram_url),
     facebookUrl: normalizeUrl(row.facebook_url),
-    drive_gallery_url: normalizeUrl(row.drive_url),
+    drive_gallery_url: normalizeUrl(row.drive_gallery_url),
     protests: [],
     protestRecordCount: 0,
     protestCount: 0,
