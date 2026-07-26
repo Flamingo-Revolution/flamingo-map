@@ -35,6 +35,19 @@ const statusFilters = Array.from(
 );
 
 
+const mediaGalleryElement =
+  document.getElementById("media-gallery");
+
+const mediaGalleryTitleElement =
+  document.getElementById("media-gallery-title");
+
+const mediaGalleryListElement =
+  document.getElementById("media-gallery-list");
+
+const mediaGalleryCloseElement =
+  document.getElementById("media-gallery-close");
+
+
 /* =========================================================
    Dedicated mobile popup
    ========================================================= */
@@ -976,6 +989,7 @@ function closeMobilePopup() {
 
 function closePopup() {
   popupOverlay.setPosition(undefined);
+  closeMediaGallery();
 
   if (popupElement) {
     popupElement.hidden = true;
@@ -1424,10 +1438,50 @@ async function loadLocations() {
     );
   }
 
-  const locations =
-    data
-      .map(normalizeLocation)
-      .filter(Boolean);
+  const locations = data
+    .map(rawLocation => {
+      const location = normalizeLocation(rawLocation);
+
+      if (!location) {
+        return null;
+      }
+
+      /*
+       * Preserve the city-level Google Drive gallery URL. The data
+       * normalizer may not know this optional field yet.
+       */
+      location.driveGalleryUrl =
+        rawLocation.driveGalleryUrl ??
+        rawLocation.drive_gallery_url ??
+        rawLocation.driveFolderUrl ??
+        rawLocation.drive_folder_url ??
+        rawLocation.galleryUrl ??
+        rawLocation.gallery_url ??
+        location.driveGalleryUrl ??
+        "";
+
+      const rawProtests = Array.isArray(rawLocation?.protests)
+        ? rawLocation.protests
+        : [];
+
+      location.protests = (location.protests || []).map((protest, index) => {
+        const rawProtest = rawProtests.find(item =>
+          String(item?.id ?? "") === String(protest?.id ?? "")
+        ) || rawProtests[index] || {};
+
+        return {
+          ...protest,
+          sourceUrl:
+            rawProtest.sourceUrl ??
+            rawProtest.source_url ??
+            protest.sourceUrl ??
+            "",
+        };
+      });
+
+      return location;
+    })
+    .filter(Boolean);
 
   const features =
     locations.map(location => {
@@ -1609,8 +1663,16 @@ map.on(
 
     if (feature) {
       openPopup(feature);
+      openMediaGallery({
+        id: feature.get("id"),
+        city: feature.get("city"),
+        title: feature.get("title"),
+        country: feature.get("country"),
+        driveGalleryUrl: feature.get("driveGalleryUrl") || "",
+      });
     } else {
       closePopup();
+      closeMediaGallery();
     }
   }
 );
@@ -1673,3 +1735,108 @@ loadLocations().catch(error => {
     "The map loaded, but the location data could not be read."
   );
 });
+
+
+function getDriveFolderId(value) {
+  const text = String(value ?? "").trim();
+
+  if (!text) {
+    return "";
+  }
+
+  const folderMatch = text.match(
+    /drive\.google\.com\/drive\/(?:u\/\d+\/)?folders\/([a-zA-Z0-9_-]+)/i
+  );
+
+  if (folderMatch) {
+    return folderMatch[1];
+  }
+
+  const embeddedMatch = text.match(
+    /embeddedfolderview\?id=([a-zA-Z0-9_-]+)/i
+  );
+
+  if (embeddedMatch) {
+    return embeddedMatch[1];
+  }
+
+  // Also accept a plain Drive folder ID in the data field.
+  return /^[a-zA-Z0-9_-]{10,}$/.test(text)
+    ? text
+    : "";
+}
+
+function getDriveGalleryUrl(city) {
+  const rawUrl =
+    city?.driveGalleryUrl ||
+    city?.drive_gallery_url ||
+    city?.driveFolderUrl ||
+    city?.drive_folder_url ||
+    city?.galleryUrl ||
+    city?.gallery_url ||
+    "";
+
+  const folderId = getDriveFolderId(rawUrl);
+
+  return folderId
+    ? `https://drive.google.com/embeddedfolderview?id=${encodeURIComponent(folderId)}#grid`
+    : "";
+}
+
+function openMediaGallery(city) {
+  const viewerUrl = getDriveGalleryUrl(city);
+
+  if (!viewerUrl) {
+    closeMediaGallery();
+    return;
+  }
+
+  if (
+    !mediaGalleryElement ||
+    !mediaGalleryTitleElement ||
+    !mediaGalleryListElement
+  ) {
+    return;
+  }
+
+  const cityName =
+    city.city ||
+    city.title ||
+    "Flamingo";
+
+  mediaGalleryTitleElement.textContent =
+    `Fotot · ${cityName}`;
+
+  mediaGalleryListElement.innerHTML = `
+    <iframe
+      class="drive-gallery-frame"
+      src="${escapeHtml(viewerUrl)}"
+      title="Fotot e protestave në ${escapeHtml(cityName)}"
+      loading="lazy"
+      allowfullscreen
+    ></iframe>
+  `;
+
+  mediaGalleryElement.hidden = false;
+
+  requestAnimationFrame(() => {
+    mediaGalleryElement.classList.add("is-open");
+  });
+}
+
+function closeMediaGallery() {
+  if (mediaGalleryElement) {
+    mediaGalleryElement.classList.remove("is-open");
+    mediaGalleryElement.hidden = true;
+  }
+
+  if (mediaGalleryListElement) {
+    // Removing the iframe stops Drive from continuing to load in the background.
+    mediaGalleryListElement.innerHTML = "";
+  }
+}
+
+mediaGalleryCloseElement?.addEventListener(
+  "click",
+  closeMediaGallery
+);
