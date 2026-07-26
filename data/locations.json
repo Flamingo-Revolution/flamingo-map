@@ -11,9 +11,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "137",
+        "id": "143",
         "title": "Athens Protest #2",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -57,9 +58,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "166",
+        "id": "172",
         "title": "Barcelona Protest #6",
         "startDate": "2026-07-09",
         "endDate": null,
@@ -73,7 +75,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "159",
+        "id": "165",
         "title": "Barcelona Protest #5",
         "startDate": "2026-07-05",
         "endDate": null,
@@ -87,7 +89,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "138",
+        "id": "144",
         "title": "Barcelona Protest #4",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -101,7 +103,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "118",
+        "id": "124",
         "title": "Barcelona Protest #3",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -176,7 +178,7 @@
     "drive_gallery_url": "https://drive.google.com/drive/u/0/folders/1THNCtJDvSEVGN_xMSsyvl37JWeQ191P-",
     "protests": [
       {
-        "id": "198",
+        "id": "204",
         "title": "Berlin Protest #8",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -190,7 +192,7 @@
         "sourceUrl": "https://www.instagram.com/p/DbFn_SVNjTO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
       },
       {
-        "id": "183",
+        "id": "189",
         "title": "Berlin protest #7",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -204,7 +206,7 @@
         "sourceUrl": "https://www.instagram.com/p/Da2ZSRmtD_w/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
       },
       {
-        "id": "171",
+        "id": "177",
         "title": "Berlin Protest #6",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -218,7 +220,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "128",
+        "id": "134",
         "title": "Berlin Protest #5",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -232,7 +234,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "119",
+        "id": "125",
         "title": "Berlin Protest #4",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -246,7 +248,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "106",
+        "id": "112",
         "title": "Berlin protest during Rama visit #3",
         "startDate": "2026-06-16",
         "endDate": null,
@@ -304,6 +306,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "73",
@@ -350,6 +353,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "53",
@@ -396,9 +400,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/vala.mass",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "199",
+        "id": "205",
         "title": "Boston Protest #3",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -412,7 +417,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "129",
+        "id": "135",
         "title": "Boston Protest #2",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -456,6 +461,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "54",
@@ -488,9 +494,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "130",
+        "id": "136",
         "title": "Netherlands & Belgium Joint Protest",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -548,6 +555,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "56",
@@ -580,9 +588,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "172",
+        "id": "178",
         "title": "Cologne Protest #3",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -640,6 +649,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "23",
@@ -672,9 +682,10 @@
     "cityUrl": "https://chat.whatsapp.com/HWSFm6BdfinG1NgfF2mF4g?s=cl&p=i&mlu=0&amv=2",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "191",
+        "id": "197",
         "title": "Dortmund Protest #3",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -688,7 +699,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "109",
+        "id": "115",
         "title": "Dortmund Protest #2",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -732,6 +743,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "74",
@@ -764,6 +776,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "8",
@@ -796,9 +809,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "210",
+        "id": "216",
         "title": "Dusseldorf #4",
         "startDate": "2026-07-17",
         "endDate": null,
@@ -812,7 +826,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "148",
+        "id": "154",
         "title": "Düsseldorf protest during Rama visit #3",
         "startDate": "2026-07-01",
         "endDate": null,
@@ -826,7 +840,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "209",
+        "id": "215",
         "title": "Dusseldorf #2",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -870,6 +884,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "9",
@@ -902,6 +917,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "90",
@@ -948,6 +964,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "10",
@@ -980,6 +997,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "60",
@@ -1012,6 +1030,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "24",
@@ -1044,6 +1063,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "91",
@@ -1104,9 +1124,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/flamingosoffrankfurt/",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "192",
+        "id": "198",
         "title": "Frankfurt Protest #8",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -1120,7 +1141,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "180",
+        "id": "186",
         "title": "Frankfurt Protest #7",
         "startDate": "2026-07-18",
         "endDate": null,
@@ -1134,7 +1155,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "168",
+        "id": "174",
         "title": "Frankfurt Protest #6",
         "startDate": "2026-07-11",
         "endDate": null,
@@ -1148,7 +1169,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "155",
+        "id": "161",
         "title": "Frankfurt Protest #5",
         "startDate": "2026-07-04",
         "endDate": null,
@@ -1162,7 +1183,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "131",
+        "id": "137",
         "title": "Frankfurt Protest #4",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -1176,7 +1197,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "120",
+        "id": "126",
         "title": "Frankfurt Protest #3",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -1234,9 +1255,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "149",
+        "id": "155",
         "title": "Geneva Protest #2",
         "startDate": "2026-07-01",
         "endDate": null,
@@ -1280,25 +1302,110 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "93",
-        "title": "Genoa Protest #8",
-        "startDate": "2026-06-06",
-        "endDate": "2026-07-19",
-        "dayCount": 44,
+        "id": "99",
+        "title": "Genoa Protest #7",
+        "startDate": "2026-07-19",
+        "endDate": null,
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
-        "participants": "Thousands",
+        "participants": "60",
         "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "98",
+        "title": "Genoa Protest #6",
+        "startDate": "2026-07-12",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "70",
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "97",
+        "title": "Genoa Protest #5",
+        "startDate": "2026-07-05",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "100",
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "96",
+        "title": "Genoa Protest #4",
+        "startDate": "2026-06-28",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "150",
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "95",
+        "title": "Genoa Protest #3",
+        "startDate": "2026-06-21",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "300",
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "94",
+        "title": "Genoa Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "500",
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "93",
+        "title": "Genoa Protest #1",
+        "startDate": "2026-06-07",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": "1000",
+        "location": "Piazza \"De Ferrari\", Genova",
         "description": "",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 1,
-    "protestCount": 44,
-    "markerStatus": "completed"
+    "protestRecordCount": 7,
+    "protestCount": 7,
+    "markerStatus": "major"
   },
   {
     "id": "gjirokaster-albania",
@@ -1312,6 +1419,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "11",
@@ -1344,9 +1452,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "108",
+        "id": "114",
         "title": "Graz Protest #1",
         "startDate": "2026-06-19",
         "endDate": null,
@@ -1376,9 +1485,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "110",
+        "id": "116",
         "title": "Hamburg Protest #3",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -1464,6 +1574,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "39",
@@ -1496,9 +1607,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "121",
+        "id": "127",
         "title": "Kakome property-rights protest",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -1528,6 +1640,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "12",
@@ -1560,6 +1673,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "13",
@@ -1592,6 +1706,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "50",
@@ -1624,9 +1739,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "122",
+        "id": "128",
         "title": "Linz Protest #2",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -1640,7 +1756,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "94",
+        "id": "100",
         "title": "Linz Protest #1",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -1670,9 +1786,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/protesta_shqiptare_londer/",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "200",
+        "id": "206",
         "title": "London Protest #11",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -1686,7 +1803,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "190",
+        "id": "196",
         "title": "London Protest #10",
         "startDate": "2026-07-23",
         "endDate": null,
@@ -1700,7 +1817,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "184",
+        "id": "190",
         "title": "London Protest #9",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -1714,7 +1831,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "173",
+        "id": "179",
         "title": "London Protest #8",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -1728,7 +1845,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "160",
+        "id": "166",
         "title": "London Protest #7",
         "startDate": "2026-07-05",
         "endDate": null,
@@ -1742,7 +1859,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "139",
+        "id": "145",
         "title": "London Protest #6",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -1756,7 +1873,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "111",
+        "id": "117",
         "title": "London Protest #5",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -1770,7 +1887,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "95",
+        "id": "101",
         "title": "London Protest #4",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -1842,6 +1959,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "78",
@@ -1874,9 +1992,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "132",
+        "id": "138",
         "title": "Madrid Protest #4",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -1890,7 +2009,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "112",
+        "id": "118",
         "title": "Madrid Protest #3",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -1948,6 +2067,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "79",
@@ -1994,6 +2114,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "64",
@@ -2026,9 +2147,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "201",
+        "id": "207",
         "title": "Milan Protest #8",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -2042,10 +2164,10 @@
         "sourceUrl": ""
       },
       {
-        "id": "185",
+        "id": "191",
         "title": "Milan Protest #7",
         "startDate": "2026-07-19",
-        "endDate": "2026-07-19",
+        "endDate": null,
         "dayCount": 1,
         "status": "completed",
         "importance": "normal",
@@ -2056,7 +2178,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "174",
+        "id": "180",
         "title": "Milan Protest #6",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -2070,7 +2192,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "161",
+        "id": "167",
         "title": "Milan Protest #5",
         "startDate": "2026-07-05",
         "endDate": null,
@@ -2084,10 +2206,10 @@
         "sourceUrl": ""
       },
       {
-        "id": "140",
+        "id": "146",
         "title": "Milan Protest #4",
         "startDate": "2026-06-28",
-        "endDate": "2026-06-28",
+        "endDate": null,
         "dayCount": 1,
         "status": "completed",
         "importance": "normal",
@@ -2098,7 +2220,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "123",
+        "id": "129",
         "title": "Milan Protest #3",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
@@ -2112,10 +2234,10 @@
         "sourceUrl": ""
       },
       {
-        "id": "96",
+        "id": "102",
         "title": "Milan Protest #2",
         "startDate": "2026-06-14",
-        "endDate": "2026-06-14",
+        "endDate": null,
         "dayCount": 1,
         "status": "completed",
         "importance": "normal",
@@ -2156,9 +2278,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/flamingos.of.munich/",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "194",
+        "id": "200",
         "title": "Munich Protest #8",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -2172,7 +2295,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "186",
+        "id": "192",
         "title": "Munich Protest #7",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -2186,7 +2309,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "165",
+        "id": "171",
         "title": "Munich Protest #3",
         "startDate": "2026-07-08",
         "endDate": null,
@@ -2200,7 +2323,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "164",
+        "id": "170",
         "title": "Munich Protest #4",
         "startDate": "2026-07-06",
         "endDate": null,
@@ -2214,7 +2337,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "156",
+        "id": "162",
         "title": "Munich Protest #5",
         "startDate": "2026-07-04",
         "endDate": null,
@@ -2228,7 +2351,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "151",
+        "id": "157",
         "title": "Munich Protest #6",
         "startDate": "2026-07-02",
         "endDate": null,
@@ -2242,7 +2365,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "97",
+        "id": "103",
         "title": "Second Munich diaspora protest",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -2286,9 +2409,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/flamingorevolutionnyc",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "207",
+        "id": "213",
         "title": "New York Protest #7",
         "startDate": "2026-07-28",
         "endDate": null,
@@ -2302,7 +2426,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "181",
+        "id": "187",
         "title": "New York Protest #6",
         "startDate": "2026-07-18",
         "endDate": null,
@@ -2316,7 +2440,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "169",
+        "id": "175",
         "title": "New York Protest #5",
         "startDate": "2026-07-11",
         "endDate": null,
@@ -2330,7 +2454,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "141",
+        "id": "147",
         "title": "New York Protest #4",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -2344,7 +2468,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "113",
+        "id": "119",
         "title": "New York Protest #3",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -2358,7 +2482,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "98",
+        "id": "104",
         "title": "New York Protest #2",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -2402,9 +2526,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "162",
+        "id": "168",
         "title": "Mërtur River dams protest",
         "startDate": "2026-07-05",
         "endDate": null,
@@ -2434,6 +2559,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "80",
@@ -2466,6 +2592,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "65",
@@ -2498,6 +2625,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "66",
@@ -2530,9 +2658,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "175",
+        "id": "181",
         "title": "Paris Protest #3",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -2546,10 +2675,10 @@
         "sourceUrl": ""
       },
       {
-        "id": "133",
+        "id": "139",
         "title": "Paris Protest #2",
         "startDate": "2026-06-27",
-        "endDate": "2026-06-27",
+        "endDate": null,
         "dayCount": 1,
         "status": "completed",
         "importance": "normal",
@@ -2590,9 +2719,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "202",
+        "id": "208",
         "title": "Philadelphia Protest #5",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -2606,7 +2736,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "179",
+        "id": "185",
         "title": "Philadelphia Protest #4",
         "startDate": "2026-07-17",
         "endDate": null,
@@ -2620,7 +2750,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "134",
+        "id": "140",
         "title": "Philadelphia Protest #3",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -2634,7 +2764,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "114",
+        "id": "120",
         "title": "Philadelphia Protest #2",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -2678,9 +2808,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "99",
+        "id": "105",
         "title": "Pisa diaspora protest",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -2710,9 +2841,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "187",
+        "id": "193",
         "title": "Pistoia Protest #1",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -2742,6 +2874,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "15",
@@ -2774,6 +2907,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "16",
@@ -2806,9 +2940,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "157",
+        "id": "163",
         "title": "Rome Protest #2",
         "startDate": "2026-07-04",
         "endDate": null,
@@ -2822,7 +2957,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "100",
+        "id": "106",
         "title": "Rome diaspora protest",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -2852,6 +2987,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "82",
@@ -2884,6 +3020,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "46",
@@ -2916,6 +3053,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "42",
@@ -2948,6 +3086,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "47",
@@ -2980,6 +3119,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "83",
@@ -3026,6 +3166,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "67",
@@ -3058,9 +3199,10 @@
     "cityUrl": "",
     "instagramUrl": "https://www.instagram.com/flamingosofstuttgart/",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "203",
+        "id": "209",
         "title": "Stuttgart Protest #7",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -3074,7 +3216,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "188",
+        "id": "194",
         "title": "Stuttgart Protest #6",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -3088,7 +3230,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "176",
+        "id": "182",
         "title": "Stuttgart Protest #5",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -3102,7 +3244,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "142",
+        "id": "148",
         "title": "Stuttgart Protest #4",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -3116,7 +3258,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "124",
+        "id": "130",
         "title": "Stuttgart Protest #3",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -3130,7 +3272,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "101",
+        "id": "107",
         "title": "Stuttgart Protest #2",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -3174,9 +3316,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "208",
+        "id": "214",
         "title": "The Hague Protest Finance",
         "startDate": "2026-07-29",
         "endDate": null,
@@ -3190,7 +3333,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "115",
+        "id": "121",
         "title": "Amsterdam Protest #1",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -3204,7 +3347,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "102",
+        "id": "108",
         "title": "Hague Protest #2",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -3262,9 +3405,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "206",
+        "id": "212",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-27",
         "endDate": null,
@@ -3278,7 +3422,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "205",
+        "id": "211",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -3292,7 +3436,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "195",
+        "id": "201",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -3306,7 +3450,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "177",
+        "id": "183",
         "title": "Tirana Last Day of Parliament",
         "startDate": "2026-07-12",
         "endDate": "2026-07-24",
@@ -3320,7 +3464,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "170",
+        "id": "176",
         "title": "Forty-second consecutive nationwide protest",
         "startDate": "2026-07-11",
         "endDate": null,
@@ -3334,7 +3478,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "167",
+        "id": "173",
         "title": "Concert-funding protest",
         "startDate": "2026-07-09",
         "endDate": null,
@@ -3348,7 +3492,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "163",
+        "id": "169",
         "title": "Continuing daily Tirana protests",
         "startDate": "2026-07-05",
         "endDate": "2026-07-10",
@@ -3362,7 +3506,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "158",
+        "id": "164",
         "title": "Thirty-fifth nationwide and diaspora mobilization",
         "startDate": "2026-07-04",
         "endDate": null,
@@ -3376,7 +3520,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "153",
+        "id": "159",
         "title": "Thirty-fourth consecutive protest",
         "startDate": "2026-07-03",
         "endDate": null,
@@ -3390,7 +3534,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "152",
+        "id": "158",
         "title": "Police-station solidarity march",
         "startDate": "2026-07-02",
         "endDate": null,
@@ -3404,7 +3548,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "150",
+        "id": "156",
         "title": "SPAK protest and submission",
         "startDate": "2026-07-01",
         "endDate": null,
@@ -3418,7 +3562,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "147",
+        "id": "153",
         "title": "Parliament plenary-session protest",
         "startDate": "2026-06-30",
         "endDate": null,
@@ -3432,7 +3576,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "146",
+        "id": "152",
         "title": "One-month anniversary protest",
         "startDate": "2026-06-29",
         "endDate": null,
@@ -3446,7 +3590,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "143",
+        "id": "149",
         "title": "Twenty-ninth consecutive protest",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -3460,7 +3604,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "135",
+        "id": "141",
         "title": "Twenty-eighth consecutive nationwide protest",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -3474,7 +3618,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "127",
+        "id": "133",
         "title": "Five-point platform protests",
         "startDate": "2026-06-25",
         "endDate": "2026-06-26",
@@ -3488,7 +3632,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "126",
+        "id": "132",
         "title": "Trade-union protest",
         "startDate": "2026-06-23",
         "endDate": null,
@@ -3502,7 +3646,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "116",
+        "id": "122",
         "title": "Twenty-first consecutive nationwide protest",
         "startDate": "2026-06-20",
         "endDate": "2026-06-22",
@@ -3516,7 +3660,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "105",
+        "id": "111",
         "title": "Daily evening protests and marches",
         "startDate": "2026-06-15",
         "endDate": "2026-06-19",
@@ -3530,7 +3674,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "103",
+        "id": "109",
         "title": "Tirana highway and airport march",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -3644,6 +3788,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "69",
@@ -3676,6 +3821,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "30",
@@ -3708,9 +3854,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "204",
+        "id": "210",
         "title": "Vienna Protest #8",
         "startDate": "2026-07-26",
         "endDate": null,
@@ -3724,7 +3871,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "189",
+        "id": "195",
         "title": "Vienna Protest #7",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -3738,7 +3885,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "178",
+        "id": "184",
         "title": "Vienna Protest #6",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -3752,7 +3899,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "154",
+        "id": "160",
         "title": "Vienna Protest #5",
         "startDate": "2026-07-03",
         "endDate": null,
@@ -3766,7 +3913,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "144",
+        "id": "150",
         "title": "Vienna Protest #4",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -3780,7 +3927,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "125",
+        "id": "131",
         "title": "Vienna Protest #3",
         "startDate": "2026-06-21",
         "endDate": null,
@@ -3794,7 +3941,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "104",
+        "id": "110",
         "title": "Vienna Protest #2",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -3838,6 +3985,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "18",
@@ -3912,9 +4060,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "197",
+        "id": "203",
         "title": "Washington DC Protest #6",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -3928,7 +4077,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "182",
+        "id": "188",
         "title": "Washington DC Protest #5",
         "startDate": "2026-07-18",
         "endDate": null,
@@ -3942,7 +4091,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "136",
+        "id": "142",
         "title": "Washington DC Protest #4",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -3956,7 +4105,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "117",
+        "id": "123",
         "title": "Washington DC Protest #3",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -4014,9 +4163,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "145",
+        "id": "151",
         "title": "Waterbury diaspora protest",
         "startDate": "2026-06-28",
         "endDate": null,
@@ -4046,9 +4196,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "196",
+        "id": "202",
         "title": "Vancouver Proteste #7",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -4062,7 +4213,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "216",
+        "id": "222",
         "title": "Vancouver Proteste #6",
         "startDate": "2026-07-19",
         "endDate": null,
@@ -4076,7 +4227,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "215",
+        "id": "221",
         "title": "Vancouver Proteste #5",
         "startDate": "2026-07-12",
         "endDate": null,
@@ -4090,7 +4241,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "214",
+        "id": "220",
         "title": "Vancouver Proteste #4",
         "startDate": "2026-07-04",
         "endDate": null,
@@ -4104,7 +4255,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "213",
+        "id": "219",
         "title": "Vancouver Proteste #3",
         "startDate": "2026-06-27",
         "endDate": null,
@@ -4118,7 +4269,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "212",
+        "id": "218",
         "title": "Vancouver Proteste #2",
         "startDate": "2026-06-20",
         "endDate": null,
@@ -4132,7 +4283,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "211",
+        "id": "217",
         "title": "Vancouver Proteste # 1",
         "startDate": "2026-06-14",
         "endDate": null,
@@ -4162,6 +4313,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "49",
@@ -4194,6 +4346,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "27",
@@ -4226,6 +4379,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "51",
@@ -4258,6 +4412,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "6",
@@ -4290,9 +4445,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "https://www.facebook.com/share/r/1CquHgsQCr/",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "193",
+        "id": "199",
         "title": "Jemi nje",
         "startDate": "2026-07-25",
         "endDate": null,
@@ -4322,9 +4478,10 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
-        "id": "107",
+        "id": "113",
         "title": "Metz Protest #1",
         "startDate": "2026-06-16",
         "endDate": null,
@@ -4354,6 +4511,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
+    "drive_gallery_url": "",
     "protests": [
       {
         "id": "72",
