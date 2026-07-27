@@ -4531,5 +4531,99 @@
     "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
+  },
+  {
+    "id": "basel-switzerland",
+    "title": "Basel",
+    "city": "Basel",
+    "country": "Switzerland",
+    "latitude": 47.559601,
+    "longitude": 7.588576,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "217",
+        "title": "Basel Protest #3",
+        "startDate": "2026-07-25",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "216",
+        "title": "Basel Protest #2",
+        "startDate": "2026-06-19",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "215",
+        "title": "Basel Protest #1",
+        "startDate": "2026-06-11",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "zurich-switzerland",
+    "title": "Zurich",
+    "city": "Zurich",
+    "country": "Switzerland",
+    "latitude": 47.36667,
+    "longitude": 8.55,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "218",
+        "title": "Zurich Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
   }
 ]
