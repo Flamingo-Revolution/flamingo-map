@@ -183,7 +183,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Near the Embassy of Albania",
@@ -292,7 +292,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "bern-switzerland",
@@ -408,7 +408,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Boston Common Park across the State House",
@@ -447,7 +447,7 @@
     ],
     "protestRecordCount": 3,
     "protestCount": 3,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "bremen-germany",
@@ -1794,7 +1794,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1945,7 +1945,7 @@
     ],
     "protestRecordCount": 11,
     "protestCount": 11,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "lyon-france",
@@ -2155,7 +2155,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -2264,7 +2264,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "munich-germany",
@@ -2727,7 +2727,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "City Hall",
@@ -2794,7 +2794,7 @@
     ],
     "protestRecordCount": 5,
     "protestCount": 5,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "pisa-italy",
@@ -3207,7 +3207,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -3302,7 +3302,7 @@
     ],
     "protestRecordCount": 7,
     "protestCount": 7,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "the-hague-netherlands",
@@ -3427,7 +3427,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -3862,7 +3862,7 @@
         "startDate": "2026-07-26",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Stephansplatz",
@@ -3971,7 +3971,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "vlore-albania",
