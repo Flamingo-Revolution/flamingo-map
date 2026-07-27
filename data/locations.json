@@ -4639,5 +4639,52 @@
     "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
+  },
+  {
+    "id": "luxembourg-lux",
+    "title": "Luxembourg",
+    "city": "Luxembourg",
+    "country": "Luxembourg",
+    "latitude": 49.8153,
+    "longitude": 6.1333,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "220",
+        "title": "Luxembourg Protest #2",
+        "startDate": "2026-07-11",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "220",
+        "title": "Luxembourg Protest #1",
+        "startDate": "2026-06-20",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
   }
 ]
