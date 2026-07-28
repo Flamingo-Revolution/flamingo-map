@@ -462,7 +462,7 @@
         "startDate": "2026-07-27",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1171,7 +1171,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
-    "drive_gallery_url": "",
+    "drive_gallery_url": "https://drive.google.com/drive/folders/17sKIWtJ5zOdj6qpNkUnKXxW1O0FU3Ym9?usp=drive_link",
     "protests": [
       {
         "id": "224",
@@ -4672,5 +4672,38 @@
     "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
+  },
+  {
+    "id": "warsaw-poland",
+    "title": "Warsaw",
+    "city": "Warsaw",
+    "country": "Poland",
+    "latitude": 52.2297,
+    "longitude": 21.0118,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "229",
+        "title": "Warsaw Proteston!",
+        "startDate": "2026-07-05",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "In front of Albanian embassy",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
   }
 ]
