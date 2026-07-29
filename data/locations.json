@@ -443,12 +443,26 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "230",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-07-29",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "228",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-28",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -821,8 +835,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 27,
-    "protestCount": 59,
+    "protestRecordCount": 28,
+    "protestCount": 60,
     "markerStatus": "confirmed"
   },
   {
@@ -1171,7 +1185,7 @@
     "cityUrl": "",
     "instagramUrl": "",
     "facebookUrl": "",
-    "drive_gallery_url": "https://drive.google.com/drive/folders/17sKIWtJ5zOdj6qpNkUnKXxW1O0FU3Ym9?usp=drive_link",
+    "drive_gallery_url": "https://drive.google.com/drive/folders/1_yPmZWSGYdfD_oDT5GZJsAFIxmXU66pF",
     "protests": [
       {
         "id": "224",
@@ -4351,7 +4365,7 @@
         "startDate": "2026-07-28",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -4446,7 +4460,7 @@
     ],
     "protestRecordCount": 7,
     "protestCount": 7,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "philadelphia-usa",
