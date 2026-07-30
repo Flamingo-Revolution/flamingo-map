@@ -443,12 +443,40 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "234",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-07-31",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "233",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-07-30",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "230",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-29",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -835,8 +863,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 28,
-    "protestCount": 60,
+    "protestRecordCount": 30,
+    "protestCount": 62,
     "markerStatus": "confirmed"
   },
   {
@@ -3436,7 +3464,7 @@
         "startDate": "2026-07-29",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -3489,7 +3517,7 @@
     ],
     "protestRecordCount": 4,
     "protestCount": 4,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "skopje-north-macedonia",
@@ -3999,6 +4027,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "231",
+        "title": "London Protest #12",
+        "startDate": "2026-08-02",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "Ora 15:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "219",
         "title": "London Protest #11",
         "startDate": "2026-07-26",
@@ -4153,9 +4195,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 11,
-    "protestCount": 11,
-    "markerStatus": "completed"
+    "protestRecordCount": 12,
+    "protestCount": 12,
+    "markerStatus": "confirmed"
   },
   {
     "id": "boston-usa",
@@ -4360,6 +4402,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "232",
+        "title": "New York Protest #8",
+        "startDate": "2026-08-02",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Konsullata shqiptare New York",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "226",
         "title": "New York Protest #7",
         "startDate": "2026-07-28",
@@ -4458,9 +4514,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
-    "markerStatus": "completed"
+    "protestRecordCount": 8,
+    "protestCount": 8,
+    "markerStatus": "confirmed"
   },
   {
     "id": "philadelphia-usa",
