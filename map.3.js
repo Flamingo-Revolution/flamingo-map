@@ -7,10 +7,12 @@ import { calculateProtestStatistics } from "./js/protest-stats.js";
    ========================================================= */
 
 const mapElement = document.getElementById("map");
-
-const popupElement = document.getElementById("popup");
-const popupContentElement = document.getElementById("popup-content");
-const popupCloserElement = document.getElementById("popup-closer");
+const cityDetailsDialogElement = document.getElementById(
+  "city-details-dialog"
+);
+const cityDetailsDialogContentElement = document.getElementById(
+  "city-details-dialog-content"
+);
 
 const messageElement = document.getElementById("map-message");
 const searchElement = document.getElementById("search");
@@ -47,55 +49,7 @@ const mediaGalleryListElement =
 const mediaGalleryCloseElement =
   document.getElementById("media-gallery-close");
 
-
-/* =========================================================
-   Dedicated mobile popup
-   ========================================================= */
-
-const mobilePopupElement = document.createElement("div");
-
-mobilePopupElement.id = "mobile-popup";
-mobilePopupElement.className = "mobile-popup";
-mobilePopupElement.hidden = true;
-
-mobilePopupElement.innerHTML = `
-  <div
-    class="mobile-popup-backdrop"
-    data-mobile-popup-close
-  ></div>
-
-  <section
-    class="mobile-popup-sheet"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="mobile-popup-title"
-  >
-    <div
-      class="mobile-popup-handle"
-      aria-hidden="true"
-    ></div>
-
-    <button
-      class="popup-closer mobile-popup-closer"
-      type="button"
-      aria-label="Mbyll detajet e qytetit"
-      data-mobile-popup-close
-    >
-      ×
-    </button>
-
-    <div
-      id="mobile-popup-content"
-      class="mobile-popup-content"
-    ></div>
-  </section>
-`;
-
-document.body.appendChild(mobilePopupElement);
-
-const mobilePopupContentElement = document.getElementById(
-  "mobile-popup-content"
-);
+let cityDetailsDialogTrigger = null;
 
 /* =========================================================
    OpenLayers map
@@ -285,33 +239,8 @@ const map = new ol.Map({
 });
 
 /* =========================================================
-   Desktop OpenLayers popup
-   ========================================================= */
-
-const popupOverlay = new ol.Overlay({
-  element: popupElement,
-  positioning: "bottom-center",
-  stopEvent: true,
-  offset: [0, -12],
-
-  autoPan: {
-    animation: {
-      duration: 200,
-    },
-  },
-});
-
-map.addOverlay(popupOverlay);
-
-/* =========================================================
    Utilities
    ========================================================= */
-
-function isMobileViewport() {
-  return window.matchMedia(
-    "(max-width: 700px)"
-  ).matches;
-}
 
 function escapeHtml(value) {
   return String(value || "").replace(
@@ -807,10 +736,7 @@ function isProtestToday(protest) {
   );
 }
 
-function buildPopupHtml(
-  feature,
-  mobile = false
-) {
+function buildPopupHtml(feature) {
   const city = escapeHtml(
     feature.get("city") ||
     feature.get("title") ||
@@ -845,13 +771,7 @@ function buildPopupHtml(
 
     <div class="popup-city-header">
       <div>
-        <h3
-          ${
-            mobile
-              ? 'id="mobile-popup-title"'
-              : ""
-          }
-        >
+        <h3 id="city-details-dialog-title">
           ${city}
         </h3>
 
@@ -895,107 +815,54 @@ function buildPopupHtml(
    Popup opening and closing
    ========================================================= */
 
-function openMobilePopup(feature) {
-  if (!mobilePopupContentElement) {
-    return;
-  }
-
-  popupOverlay.setPosition(undefined);
-
-  if (popupElement) {
-    popupElement.hidden = true;
-  }
-
-  mobilePopupContentElement.innerHTML =
-    buildPopupHtml(feature, true);
-
-  mobilePopupElement.hidden = false;
-
-  requestAnimationFrame(() => {
-    mobilePopupElement.classList.add(
-      "is-open"
-    );
-
-    document.body.classList.add(
-      "mobile-popup-open"
-    );
-
-    const closeButton =
-      mobilePopupElement.querySelector(
-        ".mobile-popup-closer"
-      );
-
-    closeButton?.focus({
-      preventScroll: true,
-    });
-  });
-}
-
-function openDesktopPopup(feature) {
-  closeMobilePopup();
-
+function openCityDetailsDialog(feature) {
   if (
-    !popupContentElement ||
-    !popupElement
+    !(cityDetailsDialogElement instanceof HTMLDialogElement) ||
+    !cityDetailsDialogContentElement
   ) {
     return;
   }
 
-  popupContentElement.innerHTML =
-    buildPopupHtml(feature, false);
+  cityDetailsDialogContentElement.innerHTML =
+    buildPopupHtml(feature);
 
-  popupElement.hidden = false;
+  cityDetailsDialogTrigger =
+    document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
 
-  popupOverlay.setPositioning(
-    "bottom-center"
-  );
+  if (!cityDetailsDialogElement.open) {
+    cityDetailsDialogElement.showModal();
+  }
 
-  popupOverlay.setOffset([
-    0,
-    -12,
-  ]);
-
-  popupOverlay.setPosition(
-    feature
-      .getGeometry()
-      .getCoordinates()
-  );
+  requestAnimationFrame(() => {
+    cityDetailsDialogElement.classList.add(
+      "is-open"
+    );
+  });
 }
 
 function openPopup(feature) {
-  if (isMobileViewport()) {
-    openMobilePopup(feature);
+  openCityDetailsDialog(feature);
+}
+
+function closeCityDetailsDialog() {
+  if (!(cityDetailsDialogElement instanceof HTMLDialogElement)) {
     return;
   }
 
-  openDesktopPopup(feature);
-}
-
-function closeMobilePopup() {
-  mobilePopupElement.classList.remove(
+  cityDetailsDialogElement.classList.remove(
     "is-open"
   );
 
-  mobilePopupElement.hidden = true;
-
-  if (mobilePopupContentElement) {
-    mobilePopupContentElement.innerHTML = "";
+  if (cityDetailsDialogElement.open) {
+    cityDetailsDialogElement.close();
   }
-
-  document.body.classList.remove(
-    "mobile-popup-open"
-  );
 }
 
 function closePopup() {
-  popupOverlay.setPosition(undefined);
   closeMediaGallery();
-
-  if (popupElement) {
-    popupElement.hidden = true;
-  }
-
-  closeMobilePopup();
+  closeCityDetailsDialog();
 }
 
 /* =========================================================
@@ -1576,31 +1443,41 @@ closePanelElement?.addEventListener(
   () => setSidebar(false)
 );
 
-popupCloserElement?.addEventListener(
-  "click",
-  closePopup
-);
-
-mobilePopupElement.addEventListener(
+cityDetailsDialogElement?.addEventListener(
   "click",
   event => {
     const closeTarget =
-      event.target.closest(
-        "[data-mobile-popup-close]"
-      );
+      event.target instanceof Element
+        ? event.target.closest(
+            "[data-city-details-dialog-close]"
+          )
+        : null;
 
-    if (closeTarget) {
-      closeMobilePopup();
+    if (
+      closeTarget ||
+      event.target === cityDetailsDialogElement
+    ) {
+      closeCityDetailsDialog();
     }
   }
 );
 
-document.addEventListener(
-  "keydown",
-  event => {
-    if (event.key === "Escape") {
-      closePopup();
+cityDetailsDialogElement?.addEventListener(
+  "close",
+  () => {
+    cityDetailsDialogElement.classList.remove(
+      "is-open"
+    );
+
+    if (cityDetailsDialogContentElement) {
+      cityDetailsDialogContentElement.innerHTML = "";
     }
+
+    cityDetailsDialogTrigger?.focus({
+      preventScroll: true,
+    });
+
+    cityDetailsDialogTrigger = null;
   }
 );
 
@@ -1709,18 +1586,6 @@ window.addEventListener(
   "resize",
   () => {
     map.updateSize();
-
-    if (isMobileViewport()) {
-      popupOverlay.setPosition(
-        undefined
-      );
-
-      if (popupElement) {
-        popupElement.hidden = true;
-      }
-    } else {
-      closeMobilePopup();
-    }
   }
 );
 

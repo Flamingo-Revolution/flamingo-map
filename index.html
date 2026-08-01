@@ -270,19 +270,33 @@
         <div id="media-gallery-list" class="media-gallery-list"></div>
       </section>
 
-      <!-- Dritarja e informacionit -->
-      <div id="popup" class="ol-popup" hidden>
-        <button
-          id="popup-closer"
-          class="popup-closer"
-          type="button"
-          aria-label="Mbyll detajet e protestës"
-        >
-          ×
-        </button>
+      <!-- Detajet e qytetit -->
+      <dialog
+        id="city-details-dialog"
+        class="city-details-dialog"
+        aria-labelledby="city-details-dialog-title"
+      >
+        <section class="city-details-dialog-panel">
+          <div
+            class="city-details-dialog-handle"
+            aria-hidden="true"
+          ></div>
 
-        <div id="popup-content"></div>
-      </div>
+          <button
+            class="popup-closer city-details-dialog-closer"
+            type="button"
+            aria-label="Mbyll detajet e qytetit"
+            data-city-details-dialog-close
+          >
+            ×
+          </button>
+
+          <div
+            id="city-details-dialog-content"
+            class="city-details-dialog-content"
+          ></div>
+        </section>
+      </dialog>
 
       <!-- Mesazhet -->
       <div
