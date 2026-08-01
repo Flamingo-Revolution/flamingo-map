@@ -448,7 +448,7 @@
         "startDate": "2026-07-31",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -462,7 +462,7 @@
         "startDate": "2026-07-30",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -865,7 +865,7 @@
     ],
     "protestRecordCount": 30,
     "protestCount": 62,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "vlore-albania",
@@ -2539,7 +2539,7 @@
         "startDate": "2026-07-31",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -2662,7 +2662,7 @@
     ],
     "protestRecordCount": 9,
     "protestCount": 9,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "nuremberg-germany",
@@ -2711,6 +2711,20 @@
     "facebookUrl": "",
     "drive_gallery_url": "",
     "protests": [
+      {
+        "id": "250",
+        "title": "Stuttgart Protest",
+        "startDate": "2026-08-02",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
       {
         "id": "230",
         "title": "Stuttgart Protest #7",
@@ -2810,9 +2824,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
-    "markerStatus": "completed"
+    "protestRecordCount": 8,
+    "protestCount": 8,
+    "markerStatus": "confirmed"
   },
   {
     "id": "athens-greece",
