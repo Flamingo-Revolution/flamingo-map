@@ -443,12 +443,26 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "240",
+        "id": "251",
         "title": "Tirana Proteston!",
-        "startDate": "2026-07-31",
+        "startDate": "2026-08-02",
         "endDate": null,
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "240",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-08-01",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -474,8 +488,8 @@
         "id": "237",
         "title": "Tirana Proteston!",
         "startDate": "2026-07-29",
-        "endDate": null,
-        "dayCount": 1,
+        "endDate": "2026-07-31",
+        "dayCount": 3,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -863,9 +877,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 30,
-    "protestCount": 62,
-    "markerStatus": "major"
+    "protestRecordCount": 31,
+    "protestCount": 65,
+    "markerStatus": "confirmed"
   },
   {
     "id": "vlore-albania",
