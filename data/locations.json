@@ -462,7 +462,7 @@
         "startDate": "2026-08-01",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1784,7 +1784,7 @@
         "startDate": "2026-08-01",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Para EU Parliament",
@@ -1809,7 +1809,7 @@
     ],
     "protestRecordCount": 2,
     "protestCount": 2,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "metz-france",
@@ -2286,7 +2286,7 @@
         "startDate": "2026-08-01",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -2409,7 +2409,7 @@
     ],
     "protestRecordCount": 9,
     "protestCount": 9,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "hamburg-germany",
@@ -3115,20 +3115,6 @@
         "sourceUrl": ""
       },
       {
-        "id": "61",
-        "title": "Firenze Protest #1",
-        "startDate": "2026-06-10",
-        "endDate": null,
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
         "id": "34",
         "title": "Firenze Protest",
         "startDate": "2026-06-06",
@@ -3143,8 +3129,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 4,
-    "protestCount": 4,
+    "protestRecordCount": 3,
+    "protestCount": 3,
     "markerStatus": "completed"
   },
   {
@@ -4560,7 +4546,7 @@
         "startDate": "2026-08-01",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -4613,7 +4599,7 @@
     ],
     "protestRecordCount": 4,
     "protestCount": 4,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "michigan-usa",
@@ -4902,7 +4888,7 @@
         "startDate": "2026-08-01",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -4997,7 +4983,7 @@
     ],
     "protestRecordCount": 7,
     "protestCount": 7,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "waterbury-united-states",
