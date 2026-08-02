@@ -13,6 +13,18 @@ const cityDetailsDialogElement = document.getElementById(
 const cityDetailsDialogContentElement = document.getElementById(
   "city-details-dialog-content"
 );
+const cityDetailsGalleryElement = document.getElementById(
+  "city-details-gallery"
+);
+const cityDetailsGalleryTitleElement = document.getElementById(
+  "city-details-gallery-title"
+);
+const cityDetailsGalleryFrameElement = document.getElementById(
+  "city-details-gallery-frame"
+);
+const cityDetailsGalleryExternalElement = document.getElementById(
+  "city-details-gallery-external"
+);
 
 const messageElement = document.getElementById("map-message");
 const searchElement = document.getElementById("search");
@@ -36,20 +48,8 @@ const statusFilters = Array.from(
   document.querySelectorAll(".status-filter")
 );
 
-
-const mediaGalleryElement =
-  document.getElementById("media-gallery");
-
-const mediaGalleryTitleElement =
-  document.getElementById("media-gallery-title");
-
-const mediaGalleryListElement =
-  document.getElementById("media-gallery-list");
-
-const mediaGalleryCloseElement =
-  document.getElementById("media-gallery-close");
-
 let cityDetailsDialogTrigger = null;
+let activeCityDetails = null;
 
 /* =========================================================
    OpenLayers map
@@ -335,10 +335,17 @@ function buildCityLinks(feature, city) {
     feature.get("facebookUrl")
   );
 
+  const hasGallery = Boolean(
+    getDriveGalleryUrl({
+      driveGalleryUrl: feature.get("driveGalleryUrl"),
+    })
+  );
+
   if (
     !cityUrl &&
     !instagramUrl &&
-    !facebookUrl
+    !facebookUrl &&
+    !hasGallery
   ) {
     return "";
   }
@@ -429,6 +436,28 @@ function buildCityLinks(feature, city) {
 
               <span>Facebook</span>
             </a>
+          `
+          : ""
+      }
+
+      ${
+        hasGallery
+          ? `
+            <button
+              class="social-link social-gallery"
+              type="button"
+              data-city-gallery-open
+              aria-label="Shiko fotot nga protestat në ${city}"
+              title="Shiko fotot"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h12a2 2 0 0 1 2 2v10"></path>
+                <rect x="3" y="7" width="16" height="13" rx="2"></rect>
+                <circle cx="8.5" cy="11.5" r="1.5"></circle>
+                <path d="m5 18 4-4 3 3 2-2 3 3"></path>
+              </svg>
+              <span>Shiko fotot</span>
+            </button>
           `
           : ""
       }
@@ -822,6 +851,14 @@ function openCityDetailsDialog(feature) {
   ) {
     return;
   }
+
+  closeMediaGallery();
+
+  activeCityDetails = {
+    city: feature.get("city"),
+    title: feature.get("title"),
+    driveGalleryUrl: feature.get("driveGalleryUrl") || "",
+  };
 
   cityDetailsDialogContentElement.innerHTML =
     buildPopupHtml(feature);
@@ -1453,6 +1490,26 @@ cityDetailsDialogElement?.addEventListener(
           )
         : null;
 
+    const galleryOpenTarget =
+      event.target instanceof Element
+        ? event.target.closest("[data-city-gallery-open]")
+        : null;
+
+    const galleryBackTarget =
+      event.target instanceof Element
+        ? event.target.closest("[data-city-gallery-back]")
+        : null;
+
+    if (galleryOpenTarget) {
+      openMediaGallery(activeCityDetails);
+      return;
+    }
+
+    if (galleryBackTarget) {
+      closeMediaGallery({ restoreFocus: true });
+      return;
+    }
+
     if (
       closeTarget ||
       event.target === cityDetailsDialogElement
@@ -1472,6 +1529,9 @@ cityDetailsDialogElement?.addEventListener(
     if (cityDetailsDialogContentElement) {
       cityDetailsDialogContentElement.innerHTML = "";
     }
+
+    closeMediaGallery();
+    activeCityDetails = null;
 
     cityDetailsDialogTrigger?.focus({
       preventScroll: true,
@@ -1540,16 +1600,8 @@ map.on(
 
     if (feature) {
       openPopup(feature);
-      openMediaGallery({
-        id: feature.get("id"),
-        city: feature.get("city"),
-        title: feature.get("title"),
-        country: feature.get("country"),
-        driveGalleryUrl: feature.get("driveGalleryUrl") || "",
-      });
     } else {
       closePopup();
-      closeMediaGallery();
     }
   }
 );
@@ -1657,9 +1709,10 @@ function openMediaGallery(city) {
   }
 
   if (
-    !mediaGalleryElement ||
-    !mediaGalleryTitleElement ||
-    !mediaGalleryListElement
+    !cityDetailsGalleryElement ||
+    !cityDetailsGalleryTitleElement ||
+    !cityDetailsGalleryFrameElement ||
+    !cityDetailsDialogContentElement
   ) {
     return;
   }
@@ -1669,39 +1722,64 @@ function openMediaGallery(city) {
     city.title ||
     "Flamingo";
 
-  mediaGalleryTitleElement.textContent =
+  cityDetailsGalleryTitleElement.textContent =
     `Fotot · ${cityName}`;
 
-  mediaGalleryListElement.innerHTML = `
+  cityDetailsGalleryFrameElement.innerHTML = `
     <iframe
       class="drive-gallery-frame"
       src="${escapeHtml(viewerUrl)}"
       title="Fotot e protestave në ${escapeHtml(cityName)}"
-      loading="lazy"
+      loading="eager"
       allowfullscreen
     ></iframe>
   `;
 
-  mediaGalleryElement.hidden = false;
+  const externalUrl = safeUrl(
+    city.driveGalleryUrl || city.drive_gallery_url || ""
+  );
 
-  requestAnimationFrame(() => {
-    mediaGalleryElement.classList.add("is-open");
-  });
-}
-
-function closeMediaGallery() {
-  if (mediaGalleryElement) {
-    mediaGalleryElement.classList.remove("is-open");
-    mediaGalleryElement.hidden = true;
+  if (cityDetailsGalleryExternalElement) {
+    cityDetailsGalleryExternalElement.hidden = !externalUrl;
+    cityDetailsGalleryExternalElement.href = externalUrl || "#";
   }
 
-  if (mediaGalleryListElement) {
+  cityDetailsDialogContentElement.hidden = true;
+  cityDetailsGalleryElement.hidden = false;
+  cityDetailsDialogElement?.classList.add("is-gallery-view");
+  cityDetailsDialogElement?.setAttribute(
+    "aria-labelledby",
+    "city-details-gallery-title"
+  );
+
+  cityDetailsGalleryElement
+    .querySelector("[data-city-gallery-back]")
+    ?.focus({ preventScroll: true });
+}
+
+function closeMediaGallery({ restoreFocus = false } = {}) {
+  if (cityDetailsGalleryElement) {
+    cityDetailsGalleryElement.hidden = true;
+  }
+
+  if (cityDetailsGalleryFrameElement) {
     // Removing the iframe stops Drive from continuing to load in the background.
-    mediaGalleryListElement.innerHTML = "";
+    cityDetailsGalleryFrameElement.innerHTML = "";
+  }
+
+  if (cityDetailsDialogContentElement) {
+    cityDetailsDialogContentElement.hidden = false;
+  }
+
+  cityDetailsDialogElement?.classList.remove("is-gallery-view");
+  cityDetailsDialogElement?.setAttribute(
+    "aria-labelledby",
+    "city-details-dialog-title"
+  );
+
+  if (restoreFocus) {
+    cityDetailsDialogContentElement
+      ?.querySelector("[data-city-gallery-open]")
+      ?.focus({ preventScroll: true });
   }
 }
-
-mediaGalleryCloseElement?.addEventListener(
-  "click",
-  closeMediaGallery
-);
