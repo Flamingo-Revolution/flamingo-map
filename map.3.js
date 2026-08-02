@@ -794,9 +794,20 @@ function buildPopupHtml(feature) {
     buildCityLinks(feature, city);
 
   return `
-    <p class="popup-type">
-      Qytet proteste
-    </p>
+    <div class="city-details-view-header">
+      <p class="popup-type">
+        Qytet proteste
+      </p>
+
+      <button
+        class="popup-closer city-details-view-close"
+        type="button"
+        aria-label="Mbyll detajet e qytetit"
+        data-city-details-dialog-close
+      >
+        ×
+      </button>
+    </div>
 
     <div class="popup-city-header">
       <div>

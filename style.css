@@ -1138,26 +1138,34 @@ button {
   display: none !important;
 }
 
-.city-details-dialog-closer {
-  position: absolute;
-  z-index: 5;
-  top: 14px;
-  right: 14px;
+.city-details-view-header {
+  display: flex;
+  min-height: 44px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.city-details-view-close {
+  position: static;
+  z-index: auto;
   width: 44px;
   height: 44px;
+  flex: 0 0 auto;
   font-size: 1.5rem;
   box-shadow: 0 3px 14px rgba(0, 0, 0, .12);
 }
 
 .city-details-dialog .popup-type {
   flex: 0 0 auto;
-  margin-right: 52px;
+  margin: 0;
 }
 
 .city-details-dialog .popup-city-header {
   display: block;
   flex: 0 0 auto;
-  padding-right: 52px;
 }
 
 .city-details-dialog .popup-city-header h3 {
@@ -1199,7 +1207,6 @@ button {
   flex: 0 0 auto;
   align-items: center;
   gap: 12px;
-  padding-right: 52px;
   margin-bottom: 12px;
 }
 
@@ -1367,7 +1374,7 @@ button {
   }
 
   .city-details-dialog .popup-city-header {
-    padding-right: 58px;
+    padding-right: 0;
   }
 
   .city-details-dialog .popup-city-header h3 {
@@ -1406,7 +1413,11 @@ button {
 
   .city-details-gallery-header {
     gap: 8px;
-    padding-right: 48px;
+  }
+
+  .city-details-gallery-header .city-details-view-close {
+    width: 40px;
+    height: 40px;
   }
 
   .city-details-gallery-external {
